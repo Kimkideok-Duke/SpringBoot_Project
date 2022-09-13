@@ -115,6 +115,16 @@ $(document).ready(function(){
     $("#loginBtn").click(function(){
     	loginCk()
     })
+    $("[name=id]").keyup(function(){
+        if(event.keyCode==13){
+            loginCk()
+        }
+    })
+    $("[name=passwd]").keyup(function(){
+        if(event.keyCode==13){
+            loginCk()
+        }
+    })
 });
 function loginCk(){
     if($("[name=id]").val()==""){

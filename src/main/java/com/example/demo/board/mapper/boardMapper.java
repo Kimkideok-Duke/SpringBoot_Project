@@ -2,6 +2,7 @@ package com.example.demo.board.mapper;
 
 import java.util.List;
 
+import com.example.demo.board.domain.NoticeFile;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -25,5 +26,8 @@ public interface boardMapper {
 
     // 공지 삭제
     public void deleteNotice(int notice_no);
+
+    // 파일 업로드
+    public void insertFile(NoticeFile ins);
 
 }

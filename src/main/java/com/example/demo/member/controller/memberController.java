@@ -63,4 +63,11 @@ public class memberController {
         d.addAttribute("isSignUp", "Y");
         return "signup";
     }
+
+    @RequestMapping("/signout")
+    public String signout(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.invalidate();
+        return "login";
+    }
 }

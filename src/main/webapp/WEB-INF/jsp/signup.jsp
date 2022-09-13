@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="col-12">
-	                    <label for="yourUsername" class="form-label">권한</label>
+	                    <label for="yourAuth1" class="form-label">권한</label>
 	                    <div class="input-group has-validation">
 	                    <div class="col-6">
 	                    	<div class="form-check">
@@ -124,14 +124,24 @@
 	                    </div>
 	                    </div>
                     </div>
-
+                  </form>
+                    <div class="col-12">
+                        <label for="yourType" class="form-label">개발직군</label>
+                        <select name="type" class="form-control" id="yourType" text-align="center">
+                            <option>--select--</option>
+                            <option value="front-end">front-end</option>
+                            <option value="back-end">back-end</option>
+                            <option value="server">server</option>
+                    </div>
+                  <form>
+                  </form>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="button" id="signUpBtn">회원 가입</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">이미 회원이신가요? <a href="pages-login.html">로그인</a></p>
                     </div>
-                  </form>
+
 
                 </div>
               </div>

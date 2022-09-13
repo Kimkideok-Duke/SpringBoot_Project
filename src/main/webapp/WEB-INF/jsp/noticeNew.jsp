@@ -166,7 +166,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">공지사항</h5>
-                <form action="${path}/insertNotice">
+                <form method="post" action="${path}/insertNotice" enctype="multipart/form-data">
                     <table class="table border-secondary">
                         <tr><th scope="row" colspan="2"></th></tr>
                         <tr>

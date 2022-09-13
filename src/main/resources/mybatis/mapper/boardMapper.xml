@@ -34,4 +34,8 @@
 	<delete id="deleteNotice" parameterType="int">
 		DELETE FROM TB_NOTICE WHERE notice_no = #{notice_no}
 	</delete>
+
+	<insert id="insertFile" parameterType="NoticeFile">
+		INSERT INTO TB_FILE(path, fname) values(#{path},#{fname})
+	</insert>
 </mapper>

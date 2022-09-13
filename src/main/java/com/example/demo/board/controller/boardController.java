@@ -1,6 +1,7 @@
 package com.example.demo.board.controller;
 
 import com.example.demo.board.domain.Notice;
+import com.example.demo.board.domain.NoticeFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -56,7 +57,12 @@ public class boardController {
 
     @RequestMapping("/updateNotice")
     public String updateNotice(Notice upt, Model d){
-        service.updateNotice(upt);
+        if(upt == null) {
+            System.out.println("NULL");
+        }else {
+            service.updateNotice(upt);
+        }
+        System.out.println("너 타는거임?>");
         d.addAttribute("proc", "upt");
         return "noticeEdit";
     }
@@ -66,5 +72,11 @@ public class boardController {
         service.deleteNotice(notice_no);
         d.addAttribute("proc", "del");
         return "noticeEdit";
+    }
+
+    @RequestMapping("/download")
+    public String download(@RequestParam("fname") String fname, Model d){
+        d.addAttribute("downloadFileName", fname);
+        return "downloadViewer";
     }
 }

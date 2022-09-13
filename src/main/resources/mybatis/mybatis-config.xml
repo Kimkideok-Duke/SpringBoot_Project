@@ -5,6 +5,7 @@
     <typeAliases>
 		<typeAlias alias="User" type="com.example.demo.member.domain.User"/>
 		<typeAlias alias="Notice" type="com.example.demo.board.domain.Notice"/>
+        <typeAlias alias="NoticeFile" type="com.example.demo.board.domain.NoticeFile"/>
     </typeAliases>
     <mappers>
 		<mapper resource="mybatis/mapper/memberMapper.xml"/>
